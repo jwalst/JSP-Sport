@@ -1,0 +1,135 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #2f2f2f
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+#wrapper{
+    width: 100%
+}
+
+.header{
+    padding:30px;
+    margin-bottom: 10px;
+    background-color:darkred;
+    color: white;
+    overflow: auto;
+}
+
+#logo{
+    float:left;
+}
+
+#menu{
+    float:right;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+.content{
+    background-color: whitesmoke;
+    padding:30px;
+}
+.row {
+    text-align: center;
+    padding: 1em; 
+}
+
+.row {
+    padding: 1em; 
+}
+
+#footer {
+    color: white;
+    background-color: #2f2f2f;
+    overflow: auto;
+    height: auto;
+    text-align: center;
+}
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+    margin-top: auto;
+    margin-bottom: 0.33em;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #c8c8c8;
+    text-decoration: none;
+}
+
+#footer div {
+    margin: 20px;
+}
+
+#footer div:first-child {
+    margin-right: 20px;
+}
+
+#footer div:last-child {
+    margin-left: 20px;
+}	
+
+
+
+.table-container
+{
+	width: 100%;
+	overflow-y: auto;
+	_overflow: auto;
+	margin: 0 0 1em;
+}
+
+.table-container::-webkit-scrollbar
+{
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+}
+
+.table-container::-webkit-scrollbar-thumb
+{
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 10px 10px; 
+}
+
+td, th{
+    padding: 1px;
+    text-align: center;
+}
+
+td{
+    background-color: grey;
+}
+
+th{
+    background-color: black;
+    color: white;
+}
+
+

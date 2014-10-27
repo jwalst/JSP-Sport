@@ -123,6 +123,38 @@ public class Teamspelers {
         return i;
     }
     
+    public int Deletespeler (String spelerscode) {
+        int i = 0;
+        String query = "Delete from teamspeler where spelerscode=?";
+        dbc.makeQuery(query);
+        dbc.insertIntoQuery(1, spelerscode);
+
+        System.out.println(dbc);
+        if (dbc.sendQuery() == -1) {
+            i = 0;
+            
+        } else {
+            i = 1;
+        }
+        return i;
+    }
+    
+    public int Deleteteam(String teamcode) {
+        int i = 0;
+        String query = "Delete from teamspeler where teamcode=?";
+        dbc.makeQuery(query);
+        dbc.insertIntoQuery(1, teamcode);
+
+        System.out.println(dbc);
+        if (dbc.sendQuery() == -1) {
+            i = 0;
+            
+        } else {
+            i = 1;
+        }
+        return i;
+    }
+    
     public String getSpelerscode() {
         String s = "";
         s += "<tr><td><strong>Spelers in dit team:</strong></td><td>";

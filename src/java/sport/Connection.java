@@ -24,7 +24,7 @@ public class Connection {
         this.host = "localhost";
         this.user = "school";
         this.password = "school";
-        this.database = "sport";
+        this.database = "sportj";
         this.dbc = new TConnection(this.vendor, this.host,
                 this.database, this.user, this.password);
     }

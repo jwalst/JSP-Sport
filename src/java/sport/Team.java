@@ -119,6 +119,24 @@ public class Team {
         }
         return i;
     }
+    
+    public String editTeam(String teamcode) {
+        String s = "";
+
+        for (Teams t : lijst) {
+            if (t.getTeamcode().equals(teamcode)) {
+                s += "<tr>";
+                s += "<td>Teamcode</td>";
+                s += "<td><input type=\"number\" name=\"teamcode\" value=\"" + t.getTeamcode()+ "\" /></td>";
+                s += "</tr>";
+                s += "<tr>";
+                s += "<td>Teamomschrijving</td>";
+                s += "<td><input type=\"text\" name=\"teamomschrijving\" value=\"" + t.getTeamomschijving()+ "\" /></td>";
+                s += "</tr>";            
+            }
+        }
+        return s;
+    }
 
     public String getLijst() {
         String s = "";
@@ -128,8 +146,8 @@ public class Team {
             s += "<td>" + t.getTeamcode() + "</td>";
             s += "<td>" + t.getTeamomschijving() + "</td>";
             s += "<td><button onclick=\"location.href='team.jsp?teamcode=" + t.getTeamcode() + "'\">View</button></td>";
-            s += "<td><button onclick=\"location.href='wijzigteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Wijzig</button></td>";
-            s += "<td><button onclick=\"location.href='deleteteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Delete</button></td>";
+            s += "<td><button onclick=\"location.href='wijzig/wijzigteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Wijzig</button></td>";
+            s += "<td><button onclick=\"location.href='verwijder/deleteteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Delete</button></td>";
             s += "</tr>";
         }
         return s;
@@ -148,7 +166,7 @@ public class Team {
         String s = "";
 
         for (Teams t : lijst) {
-        s += "<button onclick=\"location.href='voegteamspelertoe.jsp?teamcode=" + t.getTeamcode() + "'\">Voeg speler toe in dit team</button></td>";
+        s += "<button onclick=\"location.href='voegtoe/voegteamspelertoe.jsp?teamcode=" + t.getTeamcode() + "'\">Voeg speler toe in dit team</button></td>";
         //s += "<button onclick=\"location.href='wijzigteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Wijzig</button></td>";
         //s += "<button onclick=\"location.href='deleteteamformulier.jsp?teamcode=" + t.getTeamcode() + "'\">Delete</button></td>";
         }

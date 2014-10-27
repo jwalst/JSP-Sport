@@ -22,7 +22,7 @@ public class Leden {
      */
     
     public Leden(String spelercode) {
-        String query = "SELECT * FROM speler Where spelerscode = ?";
+        String query = "SELECT * FROM speler Where spelerscode = ?  order by spelersnr";
         lijst = new ArrayList<Lid>();
 
         dbc.makeQuery(query);
@@ -57,7 +57,7 @@ public class Leden {
     }
     
     public Leden() {
-        String query = "SELECT * FROM speler";
+        String query = "SELECT * FROM speler order by spelersnr ASC";
 
         lijst = new ArrayList<Lid>();
 
@@ -266,8 +266,8 @@ public class Leden {
             s += "<td>" + l.getTelefoon() + "</td>";
             s += "<td>" + l.getGeboortedatum() + "</td>";
             s += "<td><button onclick=\"location.href='persoon.jsp?spelercode=" + l.getSpelerscode() + "'\">View</button></td>";
-            s += "<td><button onclick=\"location.href='wijziglidformulier.jsp?spelercode=" + l.getSpelerscode() + "'\">Wijzigen</button></td>";
-            s += "<td><button onclick=\"location.href='deletelidformuluer.jsp?spelercode=" + l.getSpelerscode() + "'\">Delete</button></td>";
+            s += "<td><button onclick=\"location.href='wijzig/wijziglidformulier.jsp?spelercode=" + l.getSpelerscode() + "'\">Wijzigen</button></td>";
+            s += "<td><button onclick=\"location.href='verwijder/deletelidformulier.jsp?spelercode=" + l.getSpelerscode() + "'\">Delete</button></td>";
             s += "</tr>";
 
         }
